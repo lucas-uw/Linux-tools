@@ -1,2 +1,2 @@
 # Linux-tools
-Small tools for working on Linux
+Small tools to facilitate works on Linux
