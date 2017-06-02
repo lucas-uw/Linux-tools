@@ -6,9 +6,13 @@ $type = shift;
 if($infile eq "") {
   print "  list2argu.pl:  Convert column list into single argu, seperate by comma \",\" or space\n";
   print "  Ver:     1.0.0\n";
-  print "  Author:  Xiaodong Chen<xiaodc.work\@gmail.com>\n";
+  print "  Author:  Xiaodong Chen   <xiaodc.work\@gmail.com>\n\n";
   print "  Use:       list2argu.pl <infile> <type>\n";
-  print "               tpye: c=>comma, s=>space, p=>python style\n";
+  print "               tpye: c=>comma, s=>space, p=>python style\n\n";
+  print "  Example:    comma:   1,2,3,4,5\n";
+  print "              space:   1 2 3 4 5\n";
+  print "             python:   '1','2','3',4','5'\n\n";
+  print "  You can always add other styles you want\n\n";
   exit;
 }
 
