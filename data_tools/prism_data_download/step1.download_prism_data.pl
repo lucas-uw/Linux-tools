@@ -20,7 +20,7 @@ while($year<$end_year || ($year==$end_year && $month<$end_month) || ($year==$end
   $cmd = "wget --user=anonymous --password=xiaodc\@uw.edu ftp://prism.nacse.org/daily/ppt/$year/PRISM_ppt_stable_4kmD2_${stamp}_bil.zip";
   #$cmd = "wget --user=anonymous --password=xiaodc\@uw.edu ftp://prism.nacse.org/daily/ppt/$year/PRISM_ppt_provisional_4kmD2_${stamp}_bil.zip";
   print "$cmd\n";
-  #(system($cmd)==0) or die "$0: ERROR: $cmd failed\n";
+  (system($cmd)==0) or die "$0: ERROR: $cmd failed\n";
 
   $day++;
   if($day==$days_in_month[$month]+1) {
