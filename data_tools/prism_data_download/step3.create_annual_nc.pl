@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/env perl
 
 $year = shift;
 if($year % 400 == 0 || ($year%4==0 && $year%100!=0)  ) {

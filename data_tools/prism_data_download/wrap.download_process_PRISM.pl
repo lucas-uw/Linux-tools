@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/env perl
 
 for($year=2000; $year<=2000; $year++) {
   $cmd = "step1.download_prism_data.pl $year";
