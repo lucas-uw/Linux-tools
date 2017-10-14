@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/env perl
 
 $startdate = shift; #(YYYY-MM-DD)
 $enddate = shift; #(YYYY-MM-DD)
