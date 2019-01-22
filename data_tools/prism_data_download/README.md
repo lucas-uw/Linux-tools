@@ -3,4 +3,4 @@
 
 - These scripts automatically download the data, convert data into netCDF format, and concatenate files to annual big file. 
 
-- Use:  wrap.download\_process\_PRISM.pl <year>
+- Use:  wrap.download\_process\_PRISM.pl   (This will print the help function)
