@@ -4,10 +4,11 @@ import numpy as np
 import netCDF4 as nc
 import sys
 
-year = sys.argv[1]
-days = int(sys.argv[2])
+var = sys.argv[1]
+year = sys.argv[2]
+days = int(sys.argv[3])
 
-infile = 'annual_files/PRISM.'+year+'.nc'
+infile = 'annual_files/PRISM.daily.%s.%s.nc' % (var, year)
 
 rootgroup = nc.Dataset(infile,'a',format='NETCDF4')
 time = rootgroup.variables['time']

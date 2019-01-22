@@ -1,6 +1,10 @@
 #!/usr/bin/env perl
 
+$var = shift;
 $year = shift;
+$long_name = shift;
+$unit = shift;
+
 if($year % 400 == 0 || ($year%4==0 && $year%100!=0)  ) {
   $ndays = 366;
 }
@@ -37,8 +41,8 @@ while ($month < $endmonth || ($month == $endmonth && $day <= $endday) ) {
 
 }
 print "int.PRISM.$year.nc\n";
-print "ncrename -d record,time -v crs,time -v Band1,prec int.PRISM.$year.nc\n";
-print "ncap -O -s \"time=double(time)\" int.PRISM.$year.nc annual_files/PRISM.$year.nc\n";
-print "ncatted -a calendar,time,c,c,gregorian -a units,time,c,c,\"days since $year-01-01 00:00:0.0\" -a long_name,prec,m,c,\"PRISM daily precipitation\" -a units,prec,c,c,\"mm/day\" annual_files/PRISM.$year.nc\n";
-print "step4.modify_time_info.py $year $ndays\n";
+print "ncrename -d record,time -v crs,time -v Band1,$var int.PRISM.$year.nc\n";
+print "ncap -O -s \"time=double(time)\" int.PRISM.$year.nc annual_files/PRISM.daily.$var.$year.nc\n";
+print "ncatted -a calendar,time,c,c,gregorian -a units,time,c,c,\"days since $year-01-01 00:00:0.0\" -a long_name,$var,m,c,\"$long_name\" -a units,$var,c,c,\"$unit\" annual_files/PRISM.daily.$var.$year.nc\n";
+print "step4.modify_time_info.py $var $year $ndays\n";
 print "rm int.PRISM.$year.nc\n";
