@@ -15,7 +15,7 @@ for($year=$syear; $year<=$eyear; $year++) {
 	$cmd = "step1.download_prism_data.pl $var $year";
 	(system($cmd)==0) or die "$0: ERROR: $cmd failed\n";
 
-	$cmd = "mkdir $year;mv PRISM_${var}_stable_4kmD1_$year* $year/";
+	$cmd = "mkdir $year;mv PRISM_${var}_stable_4kmD2_$year* $year/";
 	(system($cmd)==0) or die "$0: ERROR: $cmd failed\n";
  
 	$cmd = "step2.convert_prism_bil2nc.pl $var $year > $year/cmd.csh";

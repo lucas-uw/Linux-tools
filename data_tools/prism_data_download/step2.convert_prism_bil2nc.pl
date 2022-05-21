@@ -12,8 +12,8 @@ if($year % 400 == 0 || ($year%4==0 && $year%100!=0) ) {
 
 while($month<12 || ($month==12 && $day<=31)) {
   $stamp = sprintf "%d%02d%02d",$year,$month,$day;
-  $bilfile = "PRISM_${var}_stable_4kmD1_${stamp}_bil.bil";
-  $zipfile = "PRISM_${var}_stable_4kmD1_${stamp}_bil.zip";
+  $bilfile = "PRISM_${var}_stable_4kmD2_${stamp}_bil.bil";
+  $zipfile = "PRISM_${var}_stable_4kmD2_${stamp}_bil.zip";
   $ncfile = "PRISM_$stamp.nc";
   if(-e "$year/$zipfile") {
     $cmd = "unzip $zipfile;/usr/bin/gdal_translate -of netCDF $bilfile $ncfile";

@@ -18,7 +18,7 @@ else {
 
 while($year<$end_year || ($year==$end_year && $month<$end_month) || ($year==$end_year && $month==$end_month && $day<=$end_day)) {
   $stamp = sprintf "%d%02d%02d",$year,$month,$day;
-  $cmd = "wget --user=anonymous --password=demo_email\@gmail.com ftp://prism.nacse.org/daily/$var/$year/PRISM_${var}_stable_4kmD1_${stamp}_bil.zip";
+  $cmd = "wget --user=anonymous --password=demo_email\@gmail.com ftp://prism.nacse.org/daily/$var/$year/PRISM_${var}_stable_4kmD2_${stamp}_bil.zip";
   print "$cmd\n";
   (system($cmd)==0) or die "$0: ERROR: $cmd failed\n";
 
