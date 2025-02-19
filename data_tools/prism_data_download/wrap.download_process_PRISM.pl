@@ -54,5 +54,5 @@ sub help() {
 	print "  Example:\n";
 	print "         $0  ppt \\\'PRISM\\\ daily\\\ precipitation\\\' mm/day 1981 1990\n";
 	print "  Dependency:\n";
-	print "         nco; gdal_translate; unzip";
+	print "         nco; gdal_translate; unzip\n";
 }
