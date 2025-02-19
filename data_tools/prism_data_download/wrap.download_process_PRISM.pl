@@ -52,5 +52,7 @@ sub help() {
 	print "               <syear>           starting year of downloading/processing\n";
 	print "               <eyear>           end year of downloading/processing\n";
 	print "  Example:\n";
-	print "         $0  ppt 'PRISM daily precipitation' mm/day 1981 1990\n";
+	print "         $0  ppt \\\'PRISM\\\ daily\\\ precipitation\\\' mm/day 1981 1990\n";
+	print "  Dependency:\n";
+	print "         nco; gdal_translate; unzip";
 }

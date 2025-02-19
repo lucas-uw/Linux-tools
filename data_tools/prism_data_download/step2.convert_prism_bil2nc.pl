@@ -16,7 +16,7 @@ while($month<12 || ($month==12 && $day<=31)) {
   $zipfile = "PRISM_${var}_stable_4kmD2_${stamp}_bil.zip";
   $ncfile = "PRISM_$stamp.nc";
   if(-e "$year/$zipfile") {
-    $cmd = "unzip $zipfile;/usr/bin/gdal_translate -of netCDF $bilfile $ncfile";
+    $cmd = "unzip $zipfile;gdal_translate -of netCDF $bilfile $ncfile";
     print "$cmd\n";
   }
 
